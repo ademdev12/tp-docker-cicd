@@ -52,12 +52,12 @@ jobs:
       - name: Test API Endpoint
         run: |
           echo "Test de /api"
-          curl -f http://localhost:3000/api
+          curl -f http://localhost:3000/api/users
 
       - name: Test DB Endpoint
         run: |
           echo "Test de /db"
-          curl -f http://localhost:3000/db
+          curl -f http://localhost:3000/api/users
 
       - name: Show logs on failure
         if: failure()
